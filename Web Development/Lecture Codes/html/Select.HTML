@@ -1,0 +1,55 @@
+<HTML>
+
+<HEAD>
+<TITLE>radio button Example</TITLE>
+
+<SCRIPT>
+<!-- HIDE FROM OTHER BROWSERS
+
+function calculate(form,callingField) {
+
+  if (callingField == "result") {
+    if (form.action[1].checked) {
+      form.entry.value = Math.sqrt(form.result.value); 
+    } else {
+      form.entry.value = form.result.value / 2;
+    }
+  } else {
+    if (form.action[1].checked) {
+      form.result.value = form.entry.value * form.entry.value;
+    } else {
+      form.result.value = form.entry.value * 2;
+    }
+    if (form.action.options[0].selected)
+//    	document.write("<br>" + form.action.options[0].value);//undefined
+    	document.write("<br>" + "1");//undefined
+    else
+    	document.write("<br>" + "2");
+  }
+
+}
+
+// STOP HIDING FROM OTHER BROWSERS -->
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+<FORM METHOD=POST>
+Value: <INPUT TYPE="text" NAME="entry" VALUE=0
+              onChange="calculate(this.form,this.name);"> 
+<BR>
+select:
+<SELECT NAME="action"> 
+<OPTION SELECTED VALUE="twice">1
+<OPTION VALUE="square">2
+</SELECT>
+Result: <INPUT TYPE=text NAME="result" VALUE=0
+               onChange="calculate(this.form,this.name);"> 
+
+</FORM>
+
+</BODY>
+
+</HTML> 

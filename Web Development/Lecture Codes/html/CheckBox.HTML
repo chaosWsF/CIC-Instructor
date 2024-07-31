@@ -1,0 +1,52 @@
+<HTML>
+
+<HEAD>
+<TITLE>checkbox Example</TITLE>
+
+<SCRIPT>
+<!-- HIDE FROM OTHER BROWSERS
+
+function calculate(form,callingField) {
+
+  if (callingField == "result") {
+    if (form.square.checked) {
+      form.entry.value = Math.sqrt(form.result.value); 
+    } else {
+      form.entry.value = form.result.value / 2;
+    }
+  } else {
+    if (form.square.checked) {
+      form.result.value = form.entry.value * form.entry.value;
+      document.write("<br>" + form.square.value);
+    } else {
+      form.result.value = form.entry.value * 2;
+      document.write("<br>" + form.square.value);//both on 
+    }
+  }
+
+}
+
+// STOP HIDING FROM OTHER BROWSERS -->
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+<FORM METHOD=POST>
+
+Value: <INPUT TYPE="text" NAME="entry" VALUE=0
+              onChange="calculate(this.form,this.name);"> 
+<BR>
+Action (default double): <INPUT TYPE=checkbox NAME=square VALUE=DM001
+onClick="calculate(this.form,this.name);"> 
+Square
+<BR>
+Result: <INPUT TYPE="text" NAME="result" VALUE=0
+               onChange="calculate(this.form,this.name);"> 
+
+</FORM>
+
+</BODY>
+
+</HTML> 

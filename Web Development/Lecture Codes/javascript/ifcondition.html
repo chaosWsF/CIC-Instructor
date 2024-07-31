@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<button type="button" onclick="myFunction()">Click me!</button>
+
+<script>
+function myFunction() {
+	var hour = new Date().getHours();
+	hour =10;
+	var message;
+	  if (hour < 20) {
+		message = "Good day";
+	  } else {
+		message = "Good evening";
+	  }
+
+	document.getElementById("demo").innerHTML = message;
+}
+</script>
+
+</body>
+</html>

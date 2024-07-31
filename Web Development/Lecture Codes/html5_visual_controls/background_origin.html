@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#example1 {
+  border: 10px dashed black;
+  padding: 15px;
+  background-image: url(flower.gif);
+  background-repeat: no-repeat;
+  background-origin: content-box;;
+}
+
+#example2 {
+  border: 10px dashed black;
+  padding: 15px;
+  background-image: url(flower.gif);
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;;
+}
+
+#example3 {
+  border: 10px dashed black;
+  padding: 15px;
+   background-image: url(flower.gif);
+   background-repeat: no-repeat;
+  background-origin: border-box;;
+}
+</style>
+</head>
+<body>
+
+<h1>The background-origin Property</h1>
+
+<p>The background-origin property defines how far the background should extend within an element.</p>
+
+<p>background-origin: content-box (this is default):</p>
+<div id="example1">
+  <p>The background extends behind the content.</p>
+</div>
+
+<p>background-origin: padding-box:</p>
+<div id="example2">
+  <p>The background extends to the inside edge of the border.</p>
+</div>
+
+<p>background-origin: border-box:</p>
+<div id="example3">
+  <p>The background extends to the edge of the border box.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title>Image Gallery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('#gallery a').click(function(){
+		var galleryHref = $(this).attr('href');
+		var galleryAlt = $(this).attr('title');
+		$('figure img').attr({ src: galleryHref, alt: galleryAlt });
+		$('figcaption').html(galleryAlt);
+		return false;
+	});
+});
+</script>
+<style>
+body {
+	background-color: #000000;
+}
+#gallery {
+	position: relative;
+}
+#gallery ul {
+	width:300px;
+	list-style-type:none;
+}
+#gallery li {
+	display:inline;
+	float:left;
+	padding:10px;
+}
+#gallery img {
+	border-style:none;
+}
+#gallery a {
+	text-decoration:none;
+	color:#333;
+	font-style: italic;
+}
+#gallery span {
+	display:none;
+}
+/*
+#gallery a:hover span {
+	display:block;
+	position:absolute;
+	top: 10px;
+	left: 300px;
+	text-align:center;
+}
+*/
+ figcaption {
+   text-align:center;
+   font-family: Papyrus, fantasy;
+   color: #ffffff;
+ }
+
+h1 {
+ 	color: #ffffff;
+}
+</style>
+</head>
+
+<body>
+<h1>Image Gallery</h1>
+<div id="gallery">
+  <ul>
+    <li><a href="photo1.jpg" title="Golden Gate Bridge">
+      <img src="photo1thumb.jpg" width="100" height="75" alt="Golden Gate Bridge">
+	  <span>
+	  <img src="photo1.jpg" width="400" height="300" alt="Golden Gate Bridge">
+	  <br>Golden Gate Bridge
+	  </span>
+	  </a>
+	</li>
+	<li><a href="photo2.jpg" title="Rocky Coastline"><img src="photo2thumb.jpg"
+	  width="100" height="75" alt="Rocky Coastline">
+	  <span><img src="photo2.jpg" width="400" height="300"
+	  alt="Rocky Coastline"><br>Rocky Coastline</span></a>
+	</li>
+	<li><a href="photo3.jpg" title="Beach View"><img src="photo3thumb.jpg"
+	  width="100" height="75" alt="Beach View">
+	  <span><img src="photo3.jpg" width="400" height="300"
+	  alt="Beach View"><br>Beach View</span></a>
+	</li>
+	<li><a href="photo4.jpg" title="Shallow Beach"><img src="photo4thumb.jpg"
+	  width="100" height="75" alt="Shallow Beach">
+	  <span><img src="photo4.jpg" width="400" height="300"
+	  alt="Shallow Beach"><br>Shallow Beach</span></a>
+	</li>
+	<li><a href="photo5.jpg" title="Crashing Waves"><img src="photo5thumb.jpg"
+	  width="100" height="75" alt="Crashing Waves">
+	  <span><img src="photo5.jpg" width="400" height="300"
+	  alt="Crashing Waves"><br>Crashing Waves</span></a>
+	</li>
+	<li><a href="photo6.jpg" title="Sunset"><img src="photo6thumb.jpg"
+	  width="100" height="75" alt="Sunset">
+	  <span><img src="photo6.jpg" width="400" height="300"
+	  alt="Sunset"><br>Sunset</span></a>
+	</li>
+  </ul>
+</div>
+<figure>
+	<img
+	  src="photo1.jpg"
+	  alt="Tropical Island"
+	  height="480"
+	  width="640">
+	<figcaption>
+	  Tropical Island Getaway
+	</figcaption>
+</figure>
+</body>
+</html>

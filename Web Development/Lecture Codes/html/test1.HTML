@@ -1,0 +1,52 @@
+<HTML>
+
+<HEAD>
+<TITLE>Listing 2.1</TITLE>
+</HEAD>
+
+<BODY>
+Here's the result:
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- HIDE FROM OTHER BROWSERS
+function displayProfile() {
+  document.write("Name: " + this.name + "<BR>"); 
+  document.write("Age: " + this.age + "<BR>"); 
+  document.write("Mother's Name: " + this.mother + "<BR>");
+  document.write("<TABLE BORDER>");
+  document.write("<TR><TH COLSPAN=24>112QQ<TH>ABCDEEY");
+  document.write("<TR><TD>223<TD>CVB");
+  document.write("</TABLE>");
+  document.write("Math Grade: " + this.grade.math + "<BR>");
+  document.write("English Grade: " + this.grade.english + "<BR>");
+  document.write("Science Grade: " + this.grade.science + "<BR>");
+  document.write("</TD>");
+  return "";
+}
+
+function student(name, age, grade, mother) {
+  this.name = name;
+  this.age = age;
+  this.grade = grade;
+  this.mother = mother;
+  this.displayProfile = displayProfile;
+}
+function grade (math, english, science) {
+  this.math = math;
+  this.english = english;
+  this.science = science;
+} 
+
+bobGrade = new grade(75,80,77);
+janeGrade = new grade(82,88,75,86);
+
+student1 = new student("Bob",10,bobGrade,"Cathy"); 
+student2 = new student("Jane",9,janeGrade,"mARLI"); 
+
+document.write(student2.displayProfile());
+
+// STOP HIDING FROM OTHER BROWSERS -->
+</SCRIPT>
+
+</BODY>
+</HTML> 

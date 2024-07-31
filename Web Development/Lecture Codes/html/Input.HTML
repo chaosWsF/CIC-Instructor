@@ -1,0 +1,28 @@
+</HTML>
+<!-- HTML FOR INPUT FRAME (this is a separate file called input.html--> 
+<HTML>
+
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- HIDE FROM OTHER BROWSERS
+function update(field) {
+   var result = field.value;
+   var output = "" + result + " = " + eval(result);
+//   document.write("<br>" + output);
+
+//   parent.frames[1].document.forms[0].result.value = output;
+   parent.frames[1].document.forms[0].elements[0].value = output;
+//   parent.frames[1].document.write("<br>" + output);
+
+}
+// STOP HIDING FROM OTHER BROWSERS -->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM METHOD=POST>
+<INPUT TYPE=text NAME="input" onChange="update(this);"> 
+</FORM>
+</BODY>
+
+</HTML>

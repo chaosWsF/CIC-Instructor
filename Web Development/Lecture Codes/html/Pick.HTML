@@ -1,0 +1,70 @@
+<HTML>
+
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- HIDE FORM OTHER BROWSERS
+
+function display(form) {
+   doc = window.open("","output"); 
+   doc.document.write ('<BODY BGCOLOR="' + form.bg.value);
+   doc.document.write ('" TEXT="' + form.fg.value); 
+   doc.document.write ('" LINK="' + form.link.value); 
+   doc.document.write ('" ALINK="' + form.alink.value);
+   doc.document.write ('" VLINK="' + form.vlink.value);
+   doc.document.writeln ('">');
+   doc.document.write("<H1>This is a test</H1>");
+   doc.document.write("You have selected these colors.<BR>");
+   doc.document.write('<A HREF="#"> This is a test link</A>');
+   doc.document.write("</BODY>"); 
+   doc.document.close();
+}
+
+function display1(form) {
+//   parent.output.document.bgColor = eval(form.bg.value) - 0xffffff; 
+   parent.output.document.bgColor = "#00ffff"; 
+   parent.output.document.fgColor = form.fg.value; 
+   parent.output.document.linkClor = form.link.value; 
+   parent.output.document.alinkColor = form.alink.value;
+   parent.output.document.vlinkColor = form.vlink.value;
+}
+
+
+// STOP HIDING SCRIPT -->
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- HIDE FROM OTHER BROWSERS
+document.write('<H1>The Colour Picker</H1>');
+document.write('<FORM METHOD=POST>');
+document.write('Enter Colors:<BR>');
+document.write('Background: <INPUT TYPE=text NAME="bg" \
+ VALUE="' + document.bgColor + '"> ... ');
+document.write('Text: <INPUT TYPE=text NAME="fg" \
+ VALUE="' + document.fgColor + '"><BR>');
+document.write('Link: <INPUT TYPE=text NAME="link" \
+ VALUE ="' + document.linkColor + '"> ...');
+document.write('Active Link: <INPUT TYPE=text NAME="alink" \
+ VALUE="' + document.alinkColor + '"><BR>');
+document.write('Followed Link: <INPUT TYPE="text" NAME="vlink" \
+ VALUE ="' + document.vlinkColor + '"><BR>');
+document.write('<INPUT TYPE=button VALUE="TEST" \
+ onClick="display(this.form);">'); 
+
+document.write('</FORM>');
+
+display1(document.forms[0]);
+// STOP HIDING FROM OTHER BROWSERS -->
+</SCRIPT>
+
+</CENTER>
+
+</BODY>
+
+</HTML> 

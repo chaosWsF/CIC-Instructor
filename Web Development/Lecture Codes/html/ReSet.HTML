@@ -1,0 +1,32 @@
+<HTML>
+
+<HEAD>
+<TITLE>reset Example</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- HIDE FROM OTHER BROWSERS
+
+function clearform(form) {
+
+  form.value1.value = "Form";
+  form.value2.value = "Cleared";
+//  document.write("<br>" + "123");
+}
+
+// STOP HIDING FROM OTHER BROWSERS -->
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+<FORM METHOD=POST>
+<INPUT TYPE="text" NAME="value1"><BR> 
+<INPUT TYPE="text" NAME="value2"><BR> 
+<INPUT TYPE="reset" VALUE="Clear Form" onClick="clearform(this.form);">
+
+</FORM>
+
+</BODY>
+
+</HTML> 

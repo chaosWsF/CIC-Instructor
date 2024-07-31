@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title>Contact Form</title>
+   <style>
+   fieldset {
+   border:2px solid #F00;
+   padding:10px;
+   margin-bottom: 10px;
+   }
+   legend {
+   font-weight:bold;
+   font-family: Georgia, Times New Roman, serif;
+   }
+   lable{
+   font-family:Arial, sans-serif;
+   }
+   </style>
+</head>
+
+<body>
+<h1>Contact Us</h1>
+<br>
+<form method=post action="http://webdevbasics.net/scripts/demo.php">
+<fieldset>
+	<legend>Customer Information</legend>
+	<label>
+	First Name:
+	</label>
+	<input type="text" name="fname" id="fname">
+	<br><br>
+	<label>
+	Last Name:
+	</label>
+	<input type="text" name="lname" id="lname">
+	<br><br>
+    E-mail: <input type="text" name ="email" id="email">
+    <br><br>
+</fieldset>
+	<label for="comments">Comments:</label>
+	<br>
+	<textarea name="comments" id="comments" rows="4" cols="40"></textarea>
+	<br><br>
+	<input type="submit" value="Contact">
+	<input type="reset">
+	</form>
+
+	<br> <br> <br>
+
+</body>
+</html>

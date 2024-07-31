@@ -1,0 +1,56 @@
+<HTML>
+
+<HEAD>
+<TITLE>Example 6.8</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- HIDE FROM OTHER BROWSERS
+
+function calculate(form) {
+
+  var num=1;
+  var number=form.number.value;
+  form.elements[num].value = number * num++;
+  form.elements[num].value = number * num++;
+  form.elements[num].value = number * num++;
+  form.elements[num].value = number * num++;
+  form.elements[num].value = number * num++;
+  form.elements[num].value = number * num++;
+  form.elements[num].value = number * num++;
+  form.elements[num].value = number * num++;
+  form.elements[num].value = number * num++;
+  form.elements[num].value = number * num++;
+
+  form.elements[0].value = "Calculate Multiple";
+  
+
+}
+
+// STOP HIDING FROM OTHER BROWSERS -->
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+<FORM METHOD=POST>
+Number: <INPUT TYPE=text NAME="number" VALUE=1 
+onChange="calculate(this.form);"><BR> 
+x 1: <INPUT TYPE=text NAME="1" VALUE=1 onFocus="blur();"><BR> 
+x 2: <INPUT TYPE=text NAME="2" VALUE=2 onFocus="blur();"><BR> 
+x 3: <INPUT TYPE=text NAME="3" VALUE=3 onFocus="blur();"><BR> 
+x 4: <INPUT TYPE=text NAME="4" VALUE=4 onFocus="blur();"><BR> 
+x 5: <INPUT TYPE=text NAME="5" VALUE=5 onFocus="blur();"><BR> 
+x 6: <INPUT TYPE=text NAME="6" VALUE=6 onFocus="blur();"><BR> 
+x 7: <INPUT TYPE=text NAME="7" VALUE=7 onFocus="blur();"><BR> 
+x 8: <INPUT TYPE=text NAME="8" VALUE=8 onFocus="blur();"><BR> 
+x 9: <INPUT TYPE=text NAME="9" VALUE=9 onFocus="blur();"><BR> 
+x 10: <INPUT TYPE=text NAME="10" VALUE=10 onFocus="this.blur();"><BR> 
+<INPUT TYPE=button NAME="calculcate" VALUE="Calculate" 
+onClick="calculate(this.form);"> 
+</FORM>
+
+
+</BODY>
+
+</HTML> 

@@ -1,0 +1,161 @@
+<HTML>
+
+<HEAD>
+<TITLE>Example 6.7</TITLE>
+
+<SCRIPT>
+<!-- HIDE FROM OTHER BROWSERS
+
+var total = 0;
+var lastOperation = "+";
+var newnumber = true;
+
+function enterNumber(digit) {
+
+  var form = digit.form;
+
+  if (newnumber) {
+    clearnumber(form);
+    newnumber = false;
+  }
+
+  form.display.value = form.display.value + digit.name; 
+  status = "You press digit: " + digit.name;
+}
+
+function clearall(form) {
+
+  total = 0;
+  lastOperation = "+";
+  form.display.value = "";
+//  document.write("<br>" + form.display.value);
+  self.status = "You clear all";
+
+}
+
+function clearnumber(form) {
+
+  form.display.value = "";
+  self.status = "You clear numbers";
+
+}
+
+function calculate(operation) {
+
+  var form = operation.form;
+
+//  var expression = total + lastOperation + form.display.value; 
+
+  lastOperation = operation.value;
+  total = eval(form.display.value);
+  
+//  total = eval(expression);
+//  form.display.value = total;
+  newnumber = true;
+  clearnumber(form);
+
+}
+
+function result(operation) {
+
+  var form = operation.form;
+
+  var expression = total + lastOperation + form.display.value; 
+
+//  lastOperation = operation.value;
+  total = eval(expression);
+  form.display.value = total;
+  newnumber = false;
+
+}
+
+
+// STOP HIDING FROM OTHER BROWSERS -->
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+<FORM>
+
+<TABLE BORDER=1>
+
+<TR>
+<TD COLSPAN=4>
+<INPUT TYPE=text NAME=display VALUE="" onFocus="this.blur();"> 
+</TD>
+</TR>
+
+<TR>
+<TD>
+<INPUT TYPE=button NAME="7" VALUE=" 7 " onClick="enterNumber(this);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="8" VALUE=" 8 " onClick="enterNumber(this);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="9" VALUE=" 9 " onClick="enterNumber(this);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="+" VALUE=" + " onClick="calculate(this);">
+</TD>
+</TR>
+
+<TR>
+<TD>
+<INPUT TYPE=button NAME="4" VALUE=" 4 " onClick="enterNumber(this);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="5" VALUE=" 5 " onClick="enterNumber(this);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="6" VALUE=" 6 " onClick="enterNumber(this);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="-" VALUE="  -  " onClick="calculate(this);">
+</TD>
+</TR>
+
+<TR>
+<TD>
+<INPUT TYPE=button NAME="1" VALUE=" 1 " onClick="enterNumber(this);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="2" VALUE=" 2 " onClick="enterNumber(this);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="3" VALUE=" 3 " onClick="enterNumber(this);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="*" VALUE=" * " onClick="calculate(this);">
+</TD>
+</TR>
+
+<TR>
+<TD>
+<INPUT TYPE=button NAME="0" VALUE=" 0 " onClick="enterNumber(this);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="C" VALUE=" C " onClick="clearall(this.form);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="CE" VALUE="CE" onClick="clearnumber(this.form);">
+</TD>
+<TD>
+<INPUT TYPE=button NAME="/" VALUE="  /  " onClick="calculate(this);">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN=4>
+<INPUT TYPE=button NAME="=" VALUE="   =   " onClick="result(this);">
+</TD>
+</TR>
+
+</TABLE>
+
+</FORM>
+
+</BODY>
+
+</HTML> 
