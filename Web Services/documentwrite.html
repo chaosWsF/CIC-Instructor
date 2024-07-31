@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The write() Method</h2>
+
+
+<p>Using document.write() after a document is loaded, deletes all existing HTML:</p>
+
+<button type="button" onclick="myFunction()">Click me!</button>
+
+<script>
+function myFunction() {
+	var XMLfile = new ActiveXObject("Msxml2.DOMDocument");
+	XMLfile.load("book.xml");
+	var rootElement = XMLfile.documentElement;
+	document.write("The root node of the XML file is: ");
+	document.writeln("<b>" + rootElement.nodeName +"</b>");
+	document.write("<br><br><br>");
+	//traverse through each child of the root element
+	//and print out its name
+	for (i=0; i<rootElement.childNodes.length; i++) {
+		var node = rootElement.childNodes.item(i);
+		document.write("The name of the node is ");
+		document.write("<b>" + node.nodeName + "</b>");
+		document.write("<br>");
+
+	}
+}
+</script>
+
+</body>
+</html>
