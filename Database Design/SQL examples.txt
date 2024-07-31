@@ -1,0 +1,106 @@
+DDL
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+Example
+CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+CREATE TABLE Students (
+	Name CHAR(30),
+	SSN CHAR(15) PRIMARY KEY NOT NULL,
+	Category CHAR(20)
+);
+
+CREATE TABLE Takes (
+	SSN CHAR(9) PRIMARY KEY NOT NULL,
+	CID CHAR(10) NOT NULL
+);
+
+CREATE TABLE Takes (
+	CID CHAR(10) NOT NULL,
+	Name CHAR(20),
+	Quarter CHAR(20)
+);
+
+DML
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+INSERT INTO Students
+VALUES('Charles', '123-45-6789', 'undergraduate')
+
+INSERT INTO Students
+VALUES('Dan', '234-56-7890', 'grad')
+
+INSERT INTO Students
+VALUES('Mary Johnson', '456-78-9012', 'undergraduate')
+
+INSERT INTO Takes
+VALUES('123-45-6789', 'CSE444');
+INSERT INTO Takes
+VALUES('123-45-6789', 'CSE444');
+
+INSERT INTO Takes
+VALUES('234-56-7890', 'CSE142');
+
+INSERT INTO Takes
+VALUES('456-78-9012', 'CSE444');
+
+INSERT INTO Courses
+VALUES('CSE444', 'Databases', 'fall');
+
+INSERT INTO Courses
+VALUES('CSE142', 'Web Services', 'fall');
+
+INSERT INTO Courses
+VALUES('CSE541', 'Operating Systems', 'winter');
+
+
+SELECT Syntax
+SELECT column1, column2, ...
+FROM table_name;
+Here, column1, column2, ... are the field names of the table you want to select data from. 
+If you want to select all the fields available in the table, use the following syntax:
+
+SELECT * FROM table_name;
+
+
+DELETE Syntax
+DELETE FROM table_name WHERE condition;
+
+
+Example
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+UPDATE Syntax
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+Note: Be careful when updating record
+
+Example
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+WHERE CustomerID = 1;
+
+The SQL WHERE Clause
+The WHERE clause is used to filter records.
+
+It is used to extract only those records that fulfill a specified condition.
+
+WHERE Syntax
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+Example
+SELECT * FROM Customers
+WHERE Country='Mexico';
