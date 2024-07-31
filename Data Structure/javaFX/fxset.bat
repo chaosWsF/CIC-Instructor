@@ -1,0 +1,1 @@
+set PATH_TO_FX="C:\Work\JDK17\javafx-sdk-17.0.2\lib"
