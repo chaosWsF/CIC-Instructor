@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="weight_inst">Enter your weight (kg):</string>
+    <string name="height_inst">Enter your height (m):</string>
+    <string name="bmi_score">Your BMI:</string>
+    <string name="bmi_category">BMI category appears here.</string>
+    <string name="default_weight">80</string>
+    <string name="default_height">1.80</string>
+    <string name="default_bmi">......</string>
+    <string name="button_text">Calculate My BMI!</string>
+</resources>
